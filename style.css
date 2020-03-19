@@ -15,7 +15,9 @@ body{
     box-sizing: border-box;
     border-radius: 50%;
     position: relative;
-    animation: turn 4s linear infinite;
+    animation: turn 4s ease infinite;
+    
+   
 }
 .load::before,.load::after{
     content: '';
@@ -39,24 +41,21 @@ body{
     position: absolute;
     text-align: center;
     line-height: 290px;
-    font-size: 30px;;
-    width: 300px;
-    height: 300px;
+    font-size: 25px;
+    width: 250px;
+    height: 200px;
     color: #f5f6fa;
-    animation: text 2s linear infinite;
-    
+    animation: text 2s ease infinite;
+    animation-direction: alternate;
 }
 
-@keyframes turn{
+ @keyframes turn{
     to{
-        transform: rotateX(360deg);
-        
-        
+        transform: rotate(360deg) ;   
     }
-}
+} 
 @keyframes text{
     to{
-        transform: skewX(360deg);
-        
+        transform: rotate(-100deg);   
     }
-}
+} 
